@@ -1,0 +1,16 @@
+.navbar .dropdown-menu {
+    min-width: auto;
+    padding: 1rem 1.5rem;
+    background-color: #FFF;
+    border: 0 solid rgba(31, 45, 61, 0);
+    border-radius: 0.375rem;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
+    box-shadow: 0 10px 30px 0 rgba(31, 45, 61, 0.1);
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu-lg {
+        min-width: auto !important;
+        border-radius: 0.25rem;
+    }
+}
