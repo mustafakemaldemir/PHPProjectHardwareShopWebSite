@@ -155,7 +155,7 @@
 <script src="/PHPProject/lib/js/typed.js"></script>
 <!-- Purpose JS -->
 <script src="/PHPProject/lib/js/purpose.js"></script>
-
+<!-- Yeni değişiklik denemesi -->
 </body>
 
 </html>
