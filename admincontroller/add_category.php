@@ -9,7 +9,7 @@ if (isset($_POST['input-name']) && isset($_POST['category_id']))
 {
 	if (add_category($_POST['input-name'], $_POST['category_id']))
 	{
-        	$message = "Kategori başarıyla eklendi";
+        	$message = "Category added successfully";
         	$style = 'color: #4d00b3;';
     	} 
 	else

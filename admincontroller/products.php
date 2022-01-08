@@ -9,20 +9,15 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
 <div class="main-content">
     <!-- Header (account) -->
     <section class="header-account-page bg-primary d-flex align-items-end" style="height: 150px"
-             data-offset-top="#header-main">
+            data-offset-top="#header-main">
         <!-- Header container -->
         <div class="container pt-4 pt-lg-0">
             <div class="row">
                 <div class=" col-lg-12">
-
-
                     <?php include("D:/xampp/htdocs/PHPProject/admincontroller/_navigation.php"); ?>
-
                 </div>
-
             </div>
         </div>
-
     </section>
     <section class="slice bg-section-secondary" style="min-height: 75vh">
         <div class="container">
@@ -32,20 +27,19 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
                     <p class="text-sm text-muted mb-0">You can edit products.</p>
                 </div>
                 <div>
-
                     <table class="table table-cards align-items-center">
                         <thead>
                         <tr>
+
                             <th scope="col" class="sort" data-sort="name">Product</th>
                             <th scope="col" class="sort" data-sort="status">Price</th>
                             <th scope="col" class="sort" data-sort="budget">Category</th>
-                            <th scope="col">Sales Amount</th>
-                            <th scope="col"></th>
+
                         </tr>
                         </thead>
                         <tbody class="list">
                         <?php
-                        $sql = "SELECT p.Id, p.Name, p.Price, p.Img, c.Name as Kategori FROM Products p JOIN Categories c ON p.CategoryId = c.Id";
+                        $sql = "SELECT p.Id, p.Name, p.Price, p.Img, c.Name as Kategori FROM Products p JOIN Categories c ON p.CategoryId = c.tabbleId";
                         $query = mysqli_query($con, $sql);
                         while ($product = mysqli_fetch_array($query)) {
 
@@ -53,7 +47,7 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
                             $name = $product['Name'];
                             $price = $product['Price'];
                             $img = ($product['Img'] == "") ? "default.png" : $product['Img'];
-                            $category = $product['Category'];
+                            $category = $product['Kategori'];
                             ?>
 
                             <tr>
@@ -69,14 +63,13 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
                                         </div>
                                     </div>
                                 </th>
+
                                 <td class="budget">
                                     <?= $price ?> TL
                                 </td>
+
                                 <td>
                                     <?= $category ?>
-                                </td>
-                                <td>
-
                                 </td>
 
                                 <td class="text-right">
@@ -99,8 +92,6 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
                                 </td>
                             </tr>
                         <?php } ?>
-                        <!--<tr class="table-divider"></tr>-->
-
                         </tbody>
                     </table>
                 </div>

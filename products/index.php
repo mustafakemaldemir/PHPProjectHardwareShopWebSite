@@ -24,7 +24,7 @@ while ($product = mysqli_fetch_array($query)) {
 
 ?>
 
-<?= getHead('Teknoloji ve Donanımlar') ?>
+<?= getHead('Technology & Hardwares') ?>
 
 
 <header class="header" id="header-main">
@@ -34,7 +34,7 @@ while ($product = mysqli_fetch_array($query)) {
         <div class="container px-lg-0">
             <!-- Logo -->
             <a class="navbar-brand mr-lg-5" href="/PHPProject/index.php">
-                <img alt="Image placeholder" src="/PHPProject/lib/harware-shop.png" id="navbar-logo" style="height: 50px;">
+                <img alt="Image placeholder" src="/PHPProject/lib/pc.png" id="navbar-logo" style="height: 50px;">
             </a>
             <!-- Navbar collapse trigger -->
             <button class="navbar-toggler pr-0" type="button" data-toggle="collapse" data-target="#navbar-main-collapse"
@@ -92,7 +92,6 @@ while ($product = mysqli_fetch_array($query)) {
                                         </ul>
                                     </li>
 
-
                                 <?php } ?>
 
                             </ul>
@@ -107,26 +106,14 @@ while ($product = mysqli_fetch_array($query)) {
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
                             <div class="dropdown-menu-links rounded-bottom delimiter-top p-4">
 
-                                <a href="../../docs/getting-started/installation.html" class="dropdown-item">My Orders</a>
+                                <a href="" class="dropdown-item">My Orders</a>
                                 <a href="/PHPProject/usercontroller/profile.php"
                                    class="dropdown-item">My Account</a>
                                 <a href="logout.php" class="dropdown-item">Exit</a>
                             </div>
                         </div>
 
-                    </li>
-
-                    <li class="nav-item mr-0">
-                        <a href="#" target="_blank"
-                           class="nav-link d-lg-none">Go to Your Shop Box</a>
-                        <a href="#" target="_blank"
-                           class="btn btn-sm btn-white btn-icon rounded-pill d-none d-lg-inline-flex"
-                           data-toggle="tooltip"
-                           data-placement="left" title="Shop Box">
-                            <span class="btn-inner--icon"><i class="far fa-shopping-cart"></i></span>
-                            <span class="btn-inner--text">Shop Box</span>
-                        </a>
-                    </li>
+                    </li>                    
                 </ul>
             </div>
         </div>
@@ -150,24 +137,7 @@ while ($product = mysqli_fetch_array($query)) {
                     <div class="pl-lg-5">
                         <!-- Product title -->
                         <h5 class="h4"><?= $pro_name ?></h5>
-                        <!-- Rating -->
-                        <div class="row align-items-center">
-                            <div class="col-6">
-                  <span class="static-rating static-rating-sm d-block"><i class="star far fa-star voted"></i>
-                    <i class="star far fa-star voted"></i>
-                    <i class="star far fa-star voted"></i>
-                    <i class="star far fa-star voted"></i>
-                    <i class="star far fa-star"></i></span>
-                            </div>
-                            <div class="col-6 text-right">
-                                <ul class="list-inline mb-0">
 
-                                    <li class="list-inline-item">
-                                        <span class="badge badge-pill badge-soft-success">Stock</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                         <!-- Description -->
                         <div class="py-4 my-4 border-top border-bottom">
                             <h6 class="text-sm">Product Information:</h6>
@@ -195,6 +165,7 @@ while ($product = mysqli_fetch_array($query)) {
         </div>
 </div>
 </section>
+
 <section class="slice slice-lg delimiter-top" id="sct-suggested-products">
     <div class="container">
         <div class="mb-5 text-center">

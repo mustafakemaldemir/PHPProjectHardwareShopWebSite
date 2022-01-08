@@ -12,15 +12,17 @@
                 <div class="row">
                     <div class="col-xl-5 col-lg-6 align-self-center">
                         <div class="text-center text-lg-left pb-5">
-                            <h1 class="h1 text-white mb-4">Hardware store has these
+                            <h1 class="h1 text-white mb-4">
+                                Hardware store has these
 
-                                 <span class="text-info typed" id="type-example-1" 
-                                    
-                                    data-type-this="main-boards, display cards, processors, solid state disks
-                                                    , hard disk drives, voice cards, cooler systems, power supplies
-                                                    , compter accossories, mouse, headsets, monitors, network products">
-                                                    
-                                 </span><br></h1>
+                                <span class="text-info typed" id="type-example-1"
+
+                                    data-type-this="main-boards, display cards, processors, solid state disks, 
+                                                    hard disk drives, voice cards, cooler systems, power supplies,
+                                                    compter accossories, mouse, headsets, monitors, network products">                                                    
+                                </span>
+                                <br>
+                            </h1>
 
                         </div>
                     </div>
@@ -44,6 +46,7 @@
             </svg>
 
         </div>
+        
     </section>
 
     <!-- Call to action (v2) -->
@@ -51,7 +54,7 @@
         <div class="container">
             <div class="text-center">
 
-                <h1 class="pb-7">Son eklenen ürünleri kaçırmayın</h1>
+                <h1 class="pb-7">Son eklenen ürünleri kaçirmayin</h1>
 
                 <div class="row">
                     <?php
@@ -104,7 +107,7 @@
         <div class="container">
 
             <div class="mb-5 text-center">
-                <h3 class="text-white mt-4"><?= $cat_name ?> Kategorisine Göz Atın</h3>
+                <h3 class="text-white mt-4"><?= $cat_name ?> Kategorisine Göz Atin</h3>
 
             </div>
 
@@ -146,7 +149,7 @@
     </section>   
 
 </div>
-<?php include("D:/xampp/htdocs/PHPProject/sharedfiles/footer2.php"); ?>
+<?php include("D:/xampp/htdocs/PHPProject/sharedfiles/footer.php"); ?>
 <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
 <script src="/PHPProject/lib/js/purpose.core.js"></script>
 <!-- Page JS -->
@@ -155,7 +158,7 @@
 <script src="/PHPProject/lib/js/typed.js"></script>
 <!-- Purpose JS -->
 <script src="/PHPProject/lib/js/purpose.js"></script>
-<!-- Yeni değişiklik denemesi -->
+
 </body>
 
 </html>

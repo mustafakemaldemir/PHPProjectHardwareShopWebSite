@@ -79,8 +79,6 @@ while ($category = mysqli_fetch_array($query)) {
 <!-- Page JS -->
 <!-- Purpose JS -->
 <script src="/PHPProject/lib/js/purpose.js"></script>
-
-
 </body>
 
 </html>

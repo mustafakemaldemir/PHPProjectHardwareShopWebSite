@@ -44,7 +44,7 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
                         <tbody class="list">
                         <?php
 
-                        $sql = "SELECT c.Id, c.Name, c2.Name as Main_Category FROM Categories c  JOIN Categories c2 ON c.MainCategoryId = c2.Id";
+                        $sql = "SELECT c.tabbleId, c.Name, c2.Name as Main_Category FROM Categories c  JOIN Categories c2 ON c.MainCategoryId = c2.tabbleId";
                         $query = mysqli_query($con, $sql);
                         while ($category = mysqli_fetch_array($query)) {
                             $id = $category['tabbleId'];
@@ -69,8 +69,11 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
                                     Number of Products
                                 </td>
 
+                                
+                                <!-- 
+
                                 <td class="text-right">
-                                    <!-- Actions -->
+                                    
                                     <div class="actions ml-3">
 
                                         <a href="#" class="action-item mr-2 edit-button"
@@ -87,6 +90,9 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
                                         </a>
                                     </div>
                                 </td>
+
+                                -->
+                                
                             </tr>
                         <?php } ?>
                         <!--<tr class="table-divider"></tr>-->
@@ -122,7 +128,7 @@ include("D:/xampp/htdocs/PHPProject/sharedfiles/_purpose_header.php");
     </div>
 </div>
 
-<form id="form-delete" action="/PHPProject/admincontroller/remove_category.php" method="get">
+<form id="form-delete" action="" method="get">
     <input type="hidden" name="id" id="remove-id" value="">
 </form>
 

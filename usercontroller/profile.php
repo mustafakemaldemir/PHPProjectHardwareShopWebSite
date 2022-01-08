@@ -85,7 +85,7 @@ if (isset($_POST["input-name"]) && isset($_POST["input-surname"]) && isset($_POS
                     </div>
                     <!-- General information form -->
                     <div class="actions-toolbar py-2 mb-4">
-                        <h5 class="mb-1">Genel bilgiler</h5>
+                        <h5 class="mb-1">General information</h5>
                         <p class="text-sm text-muted mb-0">İnput your information completely.</p>
                     </div>
                     <form action="profile.php" method="post" id="profile-form">

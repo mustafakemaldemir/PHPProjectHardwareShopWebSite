@@ -14,7 +14,7 @@ function getHead($title)
 
     return ' 
      <!DOCTYPE html>
-<html lang="en">
+        <html lang="en">
         <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,10 +61,10 @@ function getHeader()
                         <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
                             <div class="dropdown-menu-links rounded-bottom delimiter-top p-4">
 
-                                <a href="" class="dropdown-item">Siparişlerim</a>
+                                <a href="" class="dropdown-item">My Orders</a>
                                 <a href="/PHPProject/usercontroller/profile.php"
-                                   class="dropdown-item">Hesabım</a>
-                                <a href="logout.php" class="dropdown-item">Çıkış</a>
+                                   class="dropdown-item">My Account</a>
+                                <a href="logout.php" class="dropdown-item">Exit</a>
                             </div>
                         </div>
             </div>

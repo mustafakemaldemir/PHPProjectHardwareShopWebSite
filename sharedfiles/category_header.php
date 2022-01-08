@@ -1,9 +1,17 @@
 <?php
 
 $user_name_header = "LOGIN";
+
 if (isset($_SESSION['user'])) {
     $user = get_user_info($_SESSION['user']);
     $user_name_header = $user['Name'];
+}
+
+elseif (isset ($_SESSION['admin'])){
+
+    $admin = get_user_info ($_SESSION['admin']);
+    $admin_name_header = $admin ['Name'];
+    $admin_name_link = "/PHPProject/usercontroller/profile.php";
 }
 
 ?>
@@ -29,7 +37,7 @@ if (isset($_SESSION['user'])) {
                     <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                            aria-haspopup="true"
-                           aria-expanded="false">Pages</a>
+                           aria-expanded="false">Categories</a>
                         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-arrow p-0">
                             <ul class="list-group list-group-flush">
                                 <?php
@@ -82,39 +90,38 @@ if (isset($_SESSION['user'])) {
                     <li class="nav-item dropdown dropdown-animate" data-toggle="hover">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">  <?= $user_name_header ?>  </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">                            
                             <div class="dropdown-menu-links rounded-bottom delimiter-top p-4">
+                                
                                 <?php
-                                if (!isset($_SESSION['user'])) {
-                                    echo '<a href="/PHPProject/usercontroller/login.php" class="dropdown-item">LOGIN</a>';
-                                    echo '<a href="/PHPProject/usercontroller/register.php" class="dropdown-item">REGISTER</a>';
+
+                                if (isset($_SESSION['user'])) {
+
+                                    echo '<a href="#" class="dropdown-item">Sepetim</a>';
+                                    echo '<a href="/PHPProject/usercontroller/profile.php" class="dropdown-item">Hesabim</a>';                                   
                                     echo '<div class="dropdown-divider"></div>';
-                                } elseif ($_SESSION["role"] == 'Admin') {
-                                    echo '<a href="/PHPProject/admin/index.php" class="dropdown-item">Admin Panel</a>';
+                                    echo '<a href="/PHPProject/usercontroller/logout.php" class="dropdown-item">Exit</a>';                                    
+
+                                } elseif(isset($_SESSION['admin'])) {
+                                    
+                                    echo '<a href="/PHPProject/admincontroller/index.php" class="dropdown-item">Admin Panel</a>';
+                                    echo '<a href="/PHPProject/usercontroller/profile.php" class="dropdown-item">Hesabim</a>';
                                     echo '<div class="dropdown-divider"></div>';
+                                    echo '<a href="/PHPProject/usercontroller/logout.php" class="dropdown-item">Exit</a>';
                                 }
 
+                                else 
+                                {
+                                    echo '<a href="/PHPProject/usercontroller/login.php" class="dropdown-item">Login</a>';
+                                    echo '<a href="/PHPProject/usercontroller/register.php" class="dropdown-item">Register</a>';                                    
+                                }
 
                                 ?>
-                                <a href="../../docs/getting-started/installation.html" class="dropdown-item">MY Orders</a>
-                                <a href="/PHPProject/usercontroller/profile.php"
-                                   class="dropdown-item">My Account</a>
-                                <a href="/PHPProject/usercontroller/logout.php" class="dropdown-item">Exit</a>
                             </div>
                         </div>
             </div>
-            </li>
+            </li>           
 
-            <li class="nav-item mr-0">
-                <a href="#" target="_blank"
-                   class="nav-link d-lg-none">Go to your shop box</a>
-                <a href="#" target="_blank"
-                   class="btn btn-sm btn-white btn-icon rounded-pill d-none d-lg-inline-flex" data-toggle="tooltip"
-                   data-placement="left" title="Shop box">
-                    <span class="btn-inner--icon"><i class="far fa-shopping-cart"></i></span>
-                    <span class="btn-inner--text">Go to your shop box</span>
-                </a>
-            </li>
             </ul>
         </div>
         </div>

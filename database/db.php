@@ -15,7 +15,7 @@ if (mysqli_connect_errno()) {
 function check_user_login($user_email, $user_password)
 {
     global $con;
-    $sql = "SELECT * FROM users WHERE Email = '$user_email' AND Password = '$user_password'";
+    $sql = " SELECT * FROM users WHERE Email = '$user_email' AND Password = '$user_password' ";
     $query = mysqli_query($con, $sql);
     $user = mysqli_fetch_array($query);
     return (isset($user) && !empty($user));
