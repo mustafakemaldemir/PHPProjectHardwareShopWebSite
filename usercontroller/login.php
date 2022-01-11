@@ -57,7 +57,7 @@ if (isset($_POST["input-email"]) && isset($_POST["input-password"])) {
                                     </div>
                                     <input type="email" class="form-control" required name="input-email"
                                            id="input-email"
-                                           placeholder="isim@ornek.com">
+                                           placeholder="e-mail@*mail.com">
                                 </div>
                             </div>
 
